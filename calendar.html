@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML 5 Boilerplate</title>
+    <link rel = "stylesheet" href = "calendarstyle.css">
+  </head>
+  <body>
+      <div id = "login">
+        <input type="text" name="username" placeholder="Username" id="user"/>
+        <input type="text" name="password" placeholder="Password" id="pass" />
+        <button id="login_btn">Login</button><br><br>
+        </div>
+
+        <div id = "register">
+          <input type="text" name="newuser" placeholder="Username" id="newuser"/>
+          <input type="text" name="newpass" placeholder="Password" id="newpass" />
+          <button id="register_btn">Register</button><br>
+        </div>
+       
+        <button id="logout_btn">Logout</button><br>
+        <br>
+      
+      <div id = "userfunctions">
+        Users must be logged in to use the below functions
+        <div>
+          <select id="selecttag">
+            <option value="appointment">Appointment</option>
+            <option value="errand">Errand</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="school">School</option>
+            <option value="social">Social</option>
+            <option value="sports">Sports</option>
+            <option value="work">Work</option> 
+            <option value="other">Other</option>
+          </select>
+          <button type="submit" id="search_by_tag_btn"> Search by Tag</button>
+        </div>
+        <div id="searchresults">
+
+        </div>
+  
+        <div>
+          <div id="addEventForm">
+            <label for="event">Event Title: </label>
+            <input type="text" id="event" name="event">
+            <label for="day">Event Day: </label>
+            <input type="text" id="day" name="day">
+            <label for="month">Event Month: </label>
+            <input type="text" id="month" name="month">
+            <label for="year">Event Year: </label>
+            <input type="text" id="year" name="year">
+            <br>
+            <label for="hour">Event Time: </label>
+            <input type="text" id="hour" name="hour">
+            : <input type="text" id="minute" name="minute">
+            <label for="tags">Event Tag: </label>
+            <select id="tag">
+              <option value="appointment">Appointment</option>
+              <option value="errand">Errand</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="school">School</option>
+              <option value="social">Social</option>
+              <option value="sports">Sports</option>
+              <option value="work">Work</option> 
+              <option value="other">Other</option>
+            </select>
+            <input type='hidden' id="event_id" value="">
+            <button id="add_event_btn"> Add Event</button>
+          </div>
+        </div>
+
+        <div class="share-calendar" id="share_calendar">
+          <label for="shareuser">Username to share with: </label>
+          <input type="text" id="share_calendar_user" name="share_calendar_user">
+          <button type ="button" id="share_calendar_btn"> Share Calendar</button>
+      </div>
+    </div>
+
+
+        <div id = "monthDisplay">
+        </div>
+
+        <div class="form-popup" id="edit_event_popup">
+            <h1>Edit Event</h1>
+            <label for="editevent">Event Title: </label>
+            <input type="text" id="editevent" name="editevent">
+            <label for="editday">Event Day: </label>
+            <input type="text" id="editday" name="editday">
+            <label for="editmonth">Event Month: </label>
+            <input type="text" id="editmonth" name="editmonth">
+            <label for="edityear">Event Year: </label>
+            <input type="text" id="edityear" name="edityear">
+            <label for="edithour">Event Time: </label>
+            <input type="text" id="edithour" name="edithour">
+            <input type="text" id="editminute" name="editminute">
+            <label for="edittag">Event Tag: </label>
+            <select id="edittag">
+              <option value="appointment">Appointment</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="errand">Errand</option>
+              <option value="school">School</option>
+              <option value="social">Social</option>
+              <option value="sports">Sports</option>
+              <option value="work">Work</option> 
+              <option value="other">Other</option>
+            </select>
+            <button type ="button" id="edit_event_btn"> Edit Event</button>
+            <button type="button" class="close_form_btn" onclick="closeForm()">Close</button>
+        </div>
+
+        <div class="share-form-popup" id="share_event_popup">
+            <h1>Share Event</h1>
+            <label for="shareuser">Username to Share with: </label>
+            <input type="text" id="shareuser" name="shareuser">
+            <button type ="button" id="share_event_btn"> Share Event</button>
+            <button type="button" class="close_share_form_btn" onclick="closeShareForm()">Close</button>
+        </div>
+
+        <div id="calendar">
+            <button id = "prevMonth">View Previous Month</button>
+            <button id = "nextMonth">View Next Month</button>
+            <div id = "calendarWeekDays"></div>
+            <div id = "calendarBodyDisplay"> 
+                <table id = "dayTable">
+                    <tbody>
+                        <!-- filled in by javascript-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    <script src="calendar.js"></script>
+    <script src="user_ajax.js"></script>
+  </body>
+</html>
