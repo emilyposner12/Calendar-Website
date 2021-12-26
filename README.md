@@ -1,9 +1,4 @@
-# CSE330
-EMILY-POSNER-476215-EMILYPOSNER12
-
-ETHAN-HEDDEN-473325-EHEDDEN
-
-EC2 Instance: http://ec2-3-137-177-115.us-east-2.compute.amazonaws.com/~ehedden/calendar.html
+# EC2 Instance: http://ec2-3-137-177-115.us-east-2.compute.amazonaws.com/~ehedden/calendar.html
 
 Accounts created: 
 
@@ -13,7 +8,11 @@ user: test3 pass: test3
 
 user: emmy pass: emmy
 
-Creative Portion:
+This calendar website displays a month-by-month view of the calendar, with buttons to move forward or backward. Users can register and log in to the website.
+Registered users can add events, with a date and time, and can edit and delete their own events. All user and event data is kept in a MySQL database. The application uses AJAX to run server-side scripts that query the MySQL database to save and retrieve information, including user accounts and events.
+User registration, user authentication, event addition, and event deletion is handled by JavaScript and AJAX requests to the server.
+
+Additional Features:
 
     - Tags
 
